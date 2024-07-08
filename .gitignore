@@ -1,2 +1,7 @@
 venv/
 .DS_Store
+core/db.sqlite3
+vege/db.sqlite3
+core/db.sqlite3
+vege/db.sqlite3
+vege/db.sqlite3
