@@ -5,3 +5,5 @@ vege/db.sqlite3
 core/db.sqlite3
 vege/db.sqlite3
 vege/db.sqlite3
+vege/.gitignore
+.DS_Store
