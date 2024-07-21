@@ -1,0 +1,10 @@
+<body>
+    <div class="login">
+        <form method="post" class="login-form">
+            {% csrf_token %}
+            <span class="material-icon">Register</span>
+            <input type="text" name="usename" placeholder="username" required/>
+            <input type="phone_number" placeholder="phone_number" required/>
+        </form>
+    </div>
+</body>
