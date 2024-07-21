@@ -8,7 +8,7 @@ from django.conf import settings
 def save_pdf(params: dict):
     template = get_template("pdf.html")
     html = template.render(params)
-    file_name = str(uuid.uuid4()) + '.pdf'
+    file_name = f'{str(uuid.uuid4())}.pdf'
     file_path = os.path.join(settings.BASE_DIR, 'public', 'static', file_name)
 
     # Ensure the directory exists
@@ -17,10 +17,7 @@ def save_pdf(params: dict):
     try:
         with open(file_path, 'wb+') as output:
             pdf = pisa.CreatePDF(BytesIO(html.encode('UTF-8')), dest=output)
-            if pdf.err:
-                return None, False
-            else:
-                return file_name, True
+            return (None, False) if pdf.err else (file_name, True)
     except Exception as e:
         print(f"Error generating PDF: {e}")
         return str(e), False

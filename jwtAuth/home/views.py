@@ -20,11 +20,6 @@ class StudentGeneric1(generics.UpdateAPIView, generics.DestroyAPIView):
     serializer_class = StudentSerializer
     lookup_field = 'id'
 
-
-
-
-
-
 @api_view(['GET'])  # specify the allowed HTTP methods
 def get_book(request):
     book_objs = Books.objects.all()
