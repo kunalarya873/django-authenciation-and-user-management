@@ -110,5 +110,6 @@ def send_prod_api_email(req):  # For Production using API
 
     client = mt.MailClient(token=config('API_KEY'))
     client.send(mail)
+    
 
     return HttpResponse('API Email with HTML and attachment sent successfully.')

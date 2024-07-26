@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="container m-3 p-2 justify-content-center flex align-items-center">
+Are you sure you want to logout?
+<form action="logout" method="post">
+    {% csrf_token %}
+<button class="btn btn-danger">Logout</button>
+</form>
+</div>
+{% endblock %}
