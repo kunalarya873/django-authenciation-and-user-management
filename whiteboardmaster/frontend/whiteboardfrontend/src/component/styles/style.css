@@ -1,0 +1,45 @@
+body{
+    background-color: aqua;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.whiteboard{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+}
+
+.colors{
+    position: fixed;
+
+}
+
+.color{
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.color.black{
+    background-color: black;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
