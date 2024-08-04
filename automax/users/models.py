@@ -8,6 +8,7 @@ from .utils import user_directory_path
 class Location(models.Model):
     address_1 = models.CharField(max_length=128)
     address_2 = models.CharField(max_length=128, blank=True)
+    city = models.CharField(max_length=64)
     state = INStateField(default="UP")
     zip_code = models.CharField(max_length=6)
 
