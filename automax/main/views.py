@@ -5,8 +5,6 @@ from .forms import ListingForm
 from .models import Listing
 from .filters import ListingFilter
 from users.forms import LocationForm
-# Create your views here.
-
 
 def main_view(request):
     return render(request, "views/main.html", {"name": "AutoMax"})
@@ -50,3 +48,7 @@ def list_view(request):
         listing_form = ListingForm()
         location_form = LocationForm()
     return render(request, 'views/list.html', {'listing_form': listing_form, 'location_form': location_form, })
+
+@login_required
+def listing_view(request):
+    pass
